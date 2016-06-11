@@ -1,0 +1,7 @@
+C:\Project\Trailer\Trailer.Model\bin\Debug\Trailer.Model.dll.config
+C:\Project\Trailer\Trailer.Model\bin\Debug\Trailer.Model.dll
+C:\Project\Trailer\Trailer.Model\bin\Debug\Trailer.Model.pdb
+C:\Project\Trailer\Trailer.Model\bin\Debug\System.Data.Entity.dll
+C:\Project\Trailer\Trailer.Model\obj\Debug\ResolveAssemblyReference.cache
+C:\Project\Trailer\Trailer.Model\obj\Debug\Trailer.Model.dll
+C:\Project\Trailer\Trailer.Model\obj\Debug\Trailer.Model.pdb

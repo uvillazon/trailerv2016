@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EE_ARTICULOS" EntityType="Model.EE_ARTICULOS" />
+    <EntitySet Name="EE_BORDADOS" EntityType="Model.EE_BORDADOS" />
+    <EntitySet Name="EE_CLIENTES" EntityType="Model.EE_CLIENTES" />
+    <EntitySet Name="EE_EMPRESAS" EntityType="Model.EE_EMPRESAS" />
+    <EntitySet Name="EE_LISTAS" EntityType="Model.EE_LISTAS" />
+    <EntitySet Name="EE_LISTAS_ADM" EntityType="Model.EE_LISTAS_ADM" />
+    <EntitySet Name="EE_MOLDES" EntityType="Model.EE_MOLDES" />
+    <EntitySet Name="EE_PROVEEDORES" EntityType="Model.EE_PROVEEDORES" />
+    <FunctionImport Name="P_EE_ALTA_TIPO_LISTA">
+      <Parameter Name="P_TIPO_LISTA" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_LISTA">
+      <Parameter Name="P_ID_TABLA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_LISTA" Mode="In" Type="String" />
+      <Parameter Name="P_CODIGO" Mode="In" Type="String" />
+      <Parameter Name="P_VALOR" Mode="In" Type="String" />
+      <Parameter Name="P_ESTADO" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_LISTA">
+      <Parameter Name="P_ID_TABLA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_CLIENTE">
+      <Parameter Name="P_ID_CLIENTE" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_APELLIDO" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="P_NIT" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CIUDAD" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_CLIENTE">
+      <Parameter Name="P_ID_CLIENTE" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_EMPRESA">
+      <Parameter Name="P_ID_EMPRESA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CODIGO" Mode="In" Type="String" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="P_NIT" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CIUDAD" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSABLE" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_EMPRESA">
+      <Parameter Name="P_ID_EMPRESA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_RESPONSABLES" EntityType="Model.EE_RESPONSABLES" />
+    <FunctionImport Name="P_EE_ALTA_RESPONSABLE">
+      <Parameter Name="P_ID_RESPONSABLE" Mode="In" Type="Decimal" />
+      <Parameter Name="P_ID_EMPRESA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_APELLIDO" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CIUDAD" Mode="In" Type="String" />
+      <Parameter Name="P_EMPRESA" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_RESPONSABLE">
+      <Parameter Name="P_ID_RESPONSABLE" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_PROVEEDOR">
+      <Parameter Name="P_ID_PROVEEDOR" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="P_NIT" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CIUDAD" Mode="In" Type="String" />
+      <Parameter Name="P_PAIS" Mode="In" Type="String" />
+      <Parameter Name="P_WEB" Mode="In" Type="String" />
+      <Parameter Name="P_REPRESENTANTE" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_PROVEEDOR">
+      <Parameter Name="P_ID_PROVEEDOR" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_EMPLEADOS" EntityType="Model.EE_EMPLEADOS" />
+    <FunctionImport Name="P_EE_ELIMINAR_EMPLEADO">
+      <Parameter Name="P_ID_EMPLEADO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_EMPLEADO">
+      <Parameter Name="P_ID_EMPLEADO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_APELLIDO" Mode="In" Type="String" />
+      <Parameter Name="P_DIRECCION" Mode="In" Type="String" />
+      <Parameter Name="P_TELEFONO" Mode="In" Type="String" />
+      <Parameter Name="P_CI" Mode="In" Type="String" />
+      <Parameter Name="P_EMAIL" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CIUDAD" Mode="In" Type="String" />
+      <Parameter Name="P_CARGO" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_IMAGENES" EntityType="Model.EE_IMAGENES" />
+    <FunctionImport Name="P_EE_ELIMINAR_BORDADO">
+      <Parameter Name="P_ID_BORDADO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_BORDADO">
+      <Parameter Name="P_ID_BORDADO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CANAL" Mode="In" Type="String" />
+      <Parameter Name="P_KARDEX" Mode="In" Type="String" />
+      <Parameter Name="P_DISENO" Mode="In" Type="String" />
+      <Parameter Name="P_EMPRESA" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_PUNTADA" Mode="In" Type="String" />
+      <Parameter Name="P_ANCHO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_ALTO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_ORDEN_PRODUCCION" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_SECUENCIA">
+      <Parameter Name="P_COD_TABLA" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ACTUALIZAR_IMAGEN">
+      <Parameter Name="P_COD_TABLA" Mode="In" Type="String" />
+      <Parameter Name="P_ID_TABLA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_ID_IMAGEN" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_BORRAR_IMG">
+      <Parameter Name="P_ID_IMAGEN" Mode="In" Type="Decimal" />
+      <Parameter Name="P_ID_TABLA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_MATERIA_PRIMA">
+      <Parameter Name="P_ID_MATERIA_PRIMA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CODIGO" Mode="In" Type="String" />
+      <Parameter Name="P_CATEGORIA" Mode="In" Type="String" />
+      <Parameter Name="P_COLOR" Mode="In" Type="String" />
+      <Parameter Name="P_UNIDAD" Mode="In" Type="String" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_CARACTERISTICA" Mode="In" Type="String" />
+      <Parameter Name="P_STOCK_MINIMO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CALIDAD" Mode="In" Type="String" />
+      <Parameter Name="P_ESTADO" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_MATERIA_PRIMA">
+      <Parameter Name="P_ID_MATERIA_PRIMA" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ALTA_ARTICULO">
+      <Parameter Name="P_ID_ARTICULO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CODIGO" Mode="In" Type="String" />
+      <Parameter Name="P_DESCRIPCION" Mode="In" Type="String" />
+      <Parameter Name="P_NOMBRE" Mode="In" Type="String" />
+      <Parameter Name="P_CATEGORIA" Mode="In" Type="String" />
+      <Parameter Name="P_MEDIDA" Mode="In" Type="String" />
+      <Parameter Name="P_TELA" Mode="In" Type="String" />
+      <Parameter Name="P_ESTADO" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_ARTICULO">
+      <Parameter Name="P_ID_ARTICULO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_MATERIAS_PRIMA" EntityType="Model.EE_MATERIAS_PRIMA" />
+    <EntitySet Name="EE_INGRESOS" EntityType="Model.EE_INGRESOS" />
+    <FunctionImport Name="P_EE_ALTA_INGRESO">
+      <Parameter Name="P_ID_INGRESO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_PROVEEDOR" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSABLE" Mode="In" Type="String" />
+      <Parameter Name="P_DOCUMENTO" Mode="In" Type="String" />
+      <Parameter Name="P_NRO_DOCUMENTO" Mode="In" Type="String" />
+      <Parameter Name="P_CARACTERISTICA" Mode="In" Type="String" />
+      <Parameter Name="P_ESTADO" Mode="In" Type="String" />
+      <Parameter Name="P_FECHA_INGRESO" Mode="In" Type="DateTime" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_ELIMINAR_INGRESO">
+      <Parameter Name="P_ID_INGRESO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_DETALLES_INGRESO" EntityType="Model.EE_DETALLES_INGRESO" />
+    <FunctionImport Name="P_EE_ELIMINAR_DETALLE_INGRESO">
+      <Parameter Name="P_ID_DETALLE_INGRESO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="P_EE_CONTABILIDAD_INGRESO">
+      <Parameter Name="P_ID_INGRESO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="EE_ORDENES_PRODUCCION" EntityType="Model.EE_ORDENES_PRODUCCION" />
+    <FunctionImport Name="P_EE_ALTA_ORDEN_PRODUCCION">
+      <Parameter Name="P_ID_ORDEN_PRODUCCION" Mode="In" Type="Decimal" />
+      <Parameter Name="P_NRO_ORDEN" Mode="In" Type="Decimal" />
+      <Parameter Name="P_CLIENTE" Mode="In" Type="String" />
+      <Parameter Name="P_EMPRESA" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSABLE" Mode="In" Type="String" />
+      <Parameter Name="P_RESPONSABLE_RECEPCION" Mode="In" Type="String" />
+      <Parameter Name="P_CANTIDAD" Mode="In" Type="Decimal" />
+      <Parameter Name="P_COSTO" Mode="In" Type="Decimal" />
+      <Parameter Name="P_TOTAL" Mode="In" Type="Decimal" />
+      <Parameter Name="P_FECHA_RECEPCION" Mode="In" Type="DateTime" />
+      <Parameter Name="P_FECHA_ENTREGA" Mode="In" Type="DateTime" />
+      <Parameter Name="P_OBSERVACION" Mode="In" Type="String" />
+      <Parameter Name="P_RES" Mode="Out" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="EE_ARTICULOS">
+    <Key>
+      <PropertyRef Name="ID_ARTICULO" />
+    </Key>
+    <Property Name="ID_ARTICULO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CODIGO" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CATEGORIA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="MEDIDA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="TELA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_BORDADOS">
+    <Key>
+      <PropertyRef Name="ID_BORDADO" />
+    </Key>
+    <Property Name="ID_BORDADO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CANAL" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="KARDEX" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DISENO" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="EMPRESA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="PUNTADA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ANCHO" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ALTO" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ORDEN_PRODUCCION" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Type="Decimal" Name="ID_IMAGEN" Precision="38" Scale="0" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+  </EntityType>
+  <EntityType Name="EE_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_REG" Type="DateTime" />
+    <Property Name="EMAIL" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NIT" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID_EMPRESA" />
+    </Key>
+    <Property Name="ID_EMPRESA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CODIGO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_REG" Type="DateTime" />
+    <Property Name="EMAIL" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NIT" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="RESPONSABLE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_LISTAS">
+    <Key>
+      <PropertyRef Name="ID_TABLA" />
+    </Key>
+    <Property Name="ID_TABLA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TIPO_LISTA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_LISTAS_ADM">
+    <Key>
+      <PropertyRef Name="ID_TABLA" />
+    </Key>
+    <Property Name="ID_TABLA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="LISTA" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="CODIGO" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="VALOR" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_MOLDES">
+    <Key>
+      <PropertyRef Name="ID_MOLDE" />
+    </Key>
+    <Property Name="ID_MOLDE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CODIGO" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CATEGORIA" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="SASTRE" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="HILO" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_PROVEEDORES">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="CIUDAD" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PAIS" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_REG" Type="DateTime" />
+    <Property Name="EMAIL" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="WEB" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NIT" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="REPRESENTANTE" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EE_RESPONSABLES">
+    <Key>
+      <PropertyRef Name="ID_RESPONSABLE" />
+    </Key>
+    <Property Type="Decimal" Name="ID_RESPONSABLE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ID_EMPRESA" Precision="38" Scale="0" />
+    <Property Type="String" Name="EMPRESA" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOMBRE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="APELLIDO" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DIRECCION" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+    <Property Type="String" Name="EMAIL" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CIUDAD" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EE_EMPLEADOS">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+    </Key>
+    <Property Type="Decimal" Name="ID_EMPLEADO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="CI" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CARGO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CIUDAD" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOMBRE" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="APELLIDO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DIRECCION" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="130" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+    <Property Type="DateTime" Name="FECHA_BAJA" />
+    <Property Type="String" Name="EMAIL" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EE_IMAGENES">
+    <Key>
+      <PropertyRef Name="ID_IMAGEN" />
+    </Key>
+    <Property Type="Int32" Name="ID_IMAGEN" Nullable="false" />
+    <Property Type="String" Name="TABLA" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ID_TABLA" Nullable="false" />
+    <Property Type="String" Name="NOMBRE_IMG" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EXTENSION" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TAMANO" />
+    <Property Type="Binary" Name="IMAGEN_T_REAL" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="FECHA_REG" Nullable="false" />
+    <Property Type="Int16" Name="ID_USR" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EE_MATERIAS_PRIMA">
+    <Key>
+      <PropertyRef Name="ID_MATERIA_PRIMA" />
+    </Key>
+    <Property Type="Decimal" Name="ID_MATERIA_PRIMA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="CODIGO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CATEGORIA" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COLOR" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNIDAD" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NOMBRE" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CARACTERISTICA" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="STOCK_MINIMO" />
+    <Property Type="String" Name="CALIDAD" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+    <Property Type="Decimal" Name="CANTIDAD_DISP" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="COSTO" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="EE_INGRESOS">
+    <Key>
+      <PropertyRef Name="ID_INGRESO" />
+    </Key>
+    <Property Type="Decimal" Name="ID_INGRESO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NRO_INGRESO" Precision="38" Scale="0" />
+    <Property Type="String" Name="PROVEEDOR" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RESPONSABLE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DOCUMENTO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NRO_DOCUMENTO" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CARACTERISTICA" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+    <Property Type="DateTime" Name="FECHA_INGRESO" />
+    <Property Type="Decimal" Name="TOTAL" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="TOTAL_CANT" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="EE_DETALLES_INGRESO">
+    <Key>
+      <PropertyRef Name="ID_DETALLE_INGRESO" />
+    </Key>
+    <Property Type="Decimal" Name="ID_DETALLE_INGRESO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ID_INGRESO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ID_MATERIA_PRIMA" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UNIDAD" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CANTIDAD" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="COSTO" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="TOTAL" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+  </EntityType>
+  <EntityType Name="EE_ORDENES_PRODUCCION">
+    <Key>
+      <PropertyRef Name="ID_ORDEN_PRODUCCION" />
+    </Key>
+    <Property Type="Decimal" Name="ID_ORDEN_PRODUCCION" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NRO_ORDEN" Precision="38" Scale="0" />
+    <Property Type="String" Name="TIPO_CLIENTE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CLIENTE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EMPRESA" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RESPONSABLE" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RESPONSABLE_RECEPCION" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OBSERVACION" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CANTIDAD" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="CANTIDAD_ENTREGADA" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="COSTO" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="TOTAL_POR_COBRAR" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="TOTAL" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="FECHA_RECEPCION" />
+    <Property Type="DateTime" Name="FECHA_ENTREGA" />
+    <Property Type="DateTime" Name="FECHA_REG" />
+    <Property Type="String" Name="ESTADO" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

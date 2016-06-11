@@ -1,0 +1,9 @@
+C:\Project\Trailer\Trailer.Common\bin\Release\Trailer.Common.dll
+C:\Project\Trailer\Trailer.Common\bin\Release\Trailer.Common.pdb
+C:\Project\Trailer\Trailer.Common\obj\Release\ResolveAssemblyReference.cache
+C:\Project\Trailer\Trailer.Common\obj\Release\Trailer.Common.dll
+C:\Project\Trailer\Trailer.Common\obj\Release\Trailer.Common.pdb
+E:\Proyecto\Trailer\Trailer.Common\bin\Release\Trailer.Common.dll
+E:\Proyecto\Trailer\Trailer.Common\bin\Release\Trailer.Common.pdb
+E:\Proyecto\Trailer\Trailer.Common\obj\Release\Trailer.Common.dll
+E:\Proyecto\Trailer\Trailer.Common\obj\Release\Trailer.Common.pdb

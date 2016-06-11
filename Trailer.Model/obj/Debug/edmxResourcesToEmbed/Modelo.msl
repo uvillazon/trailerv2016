@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="EE_ARTICULOS">
+      <EntityTypeMapping TypeName="Model.EE_ARTICULOS">
+        <MappingFragment StoreEntitySet="EE_ARTICULOS">
+          <ScalarProperty Name="ID_ARTICULO" ColumnName="ID_ARTICULO" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="MEDIDA" ColumnName="MEDIDA" />
+          <ScalarProperty Name="TELA" ColumnName="TELA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_BORDADOS">
+      <EntityTypeMapping TypeName="Model.EE_BORDADOS">
+        <MappingFragment StoreEntitySet="EE_BORDADOS">
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="ID_IMAGEN" ColumnName="ID_IMAGEN" />
+          <ScalarProperty Name="ID_BORDADO" ColumnName="ID_BORDADO" />
+          <ScalarProperty Name="CANAL" ColumnName="CANAL" />
+          <ScalarProperty Name="KARDEX" ColumnName="KARDEX" />
+          <ScalarProperty Name="DISENO" ColumnName="DISENO" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PUNTADA" ColumnName="PUNTADA" />
+          <ScalarProperty Name="ANCHO" ColumnName="ANCHO" />
+          <ScalarProperty Name="ALTO" ColumnName="ALTO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="ORDEN_PRODUCCION" ColumnName="ORDEN_PRODUCCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_CLIENTES">
+      <EntityTypeMapping TypeName="Model.EE_CLIENTES">
+        <MappingFragment StoreEntitySet="EE_CLIENTES">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_EMPRESAS">
+      <EntityTypeMapping TypeName="Model.EE_EMPRESAS">
+        <MappingFragment StoreEntitySet="EE_EMPRESAS">
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="RESPONSABLE" ColumnName="RESPONSABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_LISTAS">
+      <EntityTypeMapping TypeName="Model.EE_LISTAS">
+        <MappingFragment StoreEntitySet="EE_LISTAS">
+          <ScalarProperty Name="ID_TABLA" ColumnName="ID_TABLA" />
+          <ScalarProperty Name="TIPO_LISTA" ColumnName="TIPO_LISTA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_LISTAS_ADM">
+      <EntityTypeMapping TypeName="Model.EE_LISTAS_ADM">
+        <MappingFragment StoreEntitySet="EE_LISTAS_ADM">
+          <ScalarProperty Name="ID_TABLA" ColumnName="ID_TABLA" />
+          <ScalarProperty Name="LISTA" ColumnName="LISTA" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_MOLDES">
+      <EntityTypeMapping TypeName="Model.EE_MOLDES">
+        <MappingFragment StoreEntitySet="EE_MOLDES">
+          <ScalarProperty Name="ID_MOLDE" ColumnName="ID_MOLDE" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="SASTRE" ColumnName="SASTRE" />
+          <ScalarProperty Name="HILO" ColumnName="HILO" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_PROVEEDORES">
+      <EntityTypeMapping TypeName="Model.EE_PROVEEDORES">
+        <MappingFragment StoreEntitySet="EE_PROVEEDORES">
+          <ScalarProperty Name="ID_PROVEEDOR" ColumnName="ID_PROVEEDOR" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="WEB" ColumnName="WEB" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="REPRESENTANTE" ColumnName="REPRESENTANTE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_TIPO_LISTA" FunctionName="Model.Store.P_EE_ALTA_TIPO_LISTA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_LISTA" FunctionName="Model.Store.P_EE_ALTA_LISTA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_LISTA" FunctionName="Model.Store.P_EE_ELIMINAR_LISTA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_CLIENTE" FunctionName="Model.Store.P_EE_ALTA_CLIENTE" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_CLIENTE" FunctionName="Model.Store.P_EE_ELIMINAR_CLIENTE" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_EMPRESA" FunctionName="Model.Store.P_EE_ALTA_EMPRESA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_EMPRESA" FunctionName="Model.Store.P_EE_ELIMINAR_EMPRESA" />
+    <EntitySetMapping Name="EE_RESPONSABLES">
+      <EntityTypeMapping TypeName="Model.EE_RESPONSABLES">
+        <MappingFragment StoreEntitySet="EE_RESPONSABLES">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_RESPONSABLE" ColumnName="ID_RESPONSABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_RESPONSABLE" FunctionName="Model.Store.P_EE_ALTA_RESPONSABLE" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_RESPONSABLE" FunctionName="Model.Store.P_EE_ELIMINAR_RESPONSABLE" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_PROVEEDOR" FunctionName="Model.Store.P_EE_ALTA_PROVEEDOR" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_PROVEEDOR" FunctionName="Model.Store.P_EE_ELIMINAR_PROVEEDOR" />
+    <EntitySetMapping Name="EE_EMPLEADOS">
+      <EntityTypeMapping TypeName="Model.EE_EMPLEADOS">
+        <MappingFragment StoreEntitySet="EE_EMPLEADOS">
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="FECHA_BAJA" ColumnName="FECHA_BAJA" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+          <ScalarProperty Name="CARGO" ColumnName="CARGO" />
+          <ScalarProperty Name="CI" ColumnName="CI" />
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_EMPLEADO" FunctionName="Model.Store.P_EE_ELIMINAR_EMPLEADO" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_EMPLEADO" FunctionName="Model.Store.P_EE_ALTA_EMPLEADO" />
+    <EntitySetMapping Name="EE_IMAGENES">
+      <EntityTypeMapping TypeName="Model.EE_IMAGENES">
+        <MappingFragment StoreEntitySet="EE_IMAGENES">
+          <ScalarProperty Name="ID_USR" ColumnName="ID_USR" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="IMAGEN_T_REAL" ColumnName="IMAGEN_T_REAL" />
+          <ScalarProperty Name="TAMANO" ColumnName="TAMANO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="EXTENSION" ColumnName="EXTENSION" />
+          <ScalarProperty Name="NOMBRE_IMG" ColumnName="NOMBRE_IMG" />
+          <ScalarProperty Name="ID_TABLA" ColumnName="ID_TABLA" />
+          <ScalarProperty Name="TABLA" ColumnName="TABLA" />
+          <ScalarProperty Name="ID_IMAGEN" ColumnName="ID_IMAGEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_BORDADO" FunctionName="Model.Store.P_EE_ELIMINAR_BORDADO" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_BORDADO" FunctionName="Model.Store.P_EE_ALTA_BORDADO" />
+    <FunctionImportMapping FunctionImportName="P_EE_SECUENCIA" FunctionName="Model.Store.P_EE_SECUENCIA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ACTUALIZAR_IMAGEN" FunctionName="Model.Store.P_EE_ACTUALIZAR_IMAGEN" />
+    <FunctionImportMapping FunctionImportName="P_EE_BORRAR_IMG" FunctionName="Model.Store.P_EE_BORRAR_IMG" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_MATERIA_PRIMA" FunctionName="Model.Store.P_EE_ALTA_MATERIA_PRIMA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_MATERIA_PRIMA" FunctionName="Model.Store.P_EE_ELIMINAR_MATERIA_PRIMA" />
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_ARTICULO" FunctionName="Model.Store.P_EE_ALTA_ARTICULO" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_ARTICULO" FunctionName="Model.Store.P_EE_ELIMINAR_ARTICULO" />
+    <EntitySetMapping Name="EE_MATERIAS_PRIMA">
+      <EntityTypeMapping TypeName="Model.EE_MATERIAS_PRIMA">
+        <MappingFragment StoreEntitySet="EE_MATERIAS_PRIMA">
+          <ScalarProperty Name="COSTO" ColumnName="COSTO" />
+          <ScalarProperty Name="CANTIDAD_DISP" ColumnName="CANTIDAD_DISP" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CALIDAD" ColumnName="CALIDAD" />
+          <ScalarProperty Name="STOCK_MINIMO" ColumnName="STOCK_MINIMO" />
+          <ScalarProperty Name="CARACTERISTICA" ColumnName="CARACTERISTICA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+          <ScalarProperty Name="ID_MATERIA_PRIMA" ColumnName="ID_MATERIA_PRIMA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EE_INGRESOS">
+      <EntityTypeMapping TypeName="Model.EE_INGRESOS">
+        <MappingFragment StoreEntitySet="EE_INGRESOS">
+          <ScalarProperty Name="TOTAL_CANT" ColumnName="TOTAL_CANT" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CARACTERISTICA" ColumnName="CARACTERISTICA" />
+          <ScalarProperty Name="NRO_DOCUMENTO" ColumnName="NRO_DOCUMENTO" />
+          <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+          <ScalarProperty Name="RESPONSABLE" ColumnName="RESPONSABLE" />
+          <ScalarProperty Name="PROVEEDOR" ColumnName="PROVEEDOR" />
+          <ScalarProperty Name="NRO_INGRESO" ColumnName="NRO_INGRESO" />
+          <ScalarProperty Name="ID_INGRESO" ColumnName="ID_INGRESO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_INGRESO" FunctionName="Model.Store.P_EE_ALTA_INGRESO" />
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_INGRESO" FunctionName="Model.Store.P_EE_ELIMINAR_INGRESO" />
+    <EntitySetMapping Name="EE_DETALLES_INGRESO">
+      <EntityTypeMapping TypeName="Model.EE_DETALLES_INGRESO">
+        <MappingFragment StoreEntitySet="EE_DETALLES_INGRESO">
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="COSTO" ColumnName="COSTO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID_MATERIA_PRIMA" ColumnName="ID_MATERIA_PRIMA" />
+          <ScalarProperty Name="ID_INGRESO" ColumnName="ID_INGRESO" />
+          <ScalarProperty Name="ID_DETALLE_INGRESO" ColumnName="ID_DETALLE_INGRESO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ELIMINAR_DETALLE_INGRESO" FunctionName="Model.Store.P_EE_ELIMINAR_DETALLE_INGRESO" />
+    <FunctionImportMapping FunctionImportName="P_EE_CONTABILIDAD_INGRESO" FunctionName="Model.Store.P_EE_CONTABILIDAD_INGRESO" />
+    <EntitySetMapping Name="EE_ORDENES_PRODUCCION">
+      <EntityTypeMapping TypeName="Model.EE_ORDENES_PRODUCCION">
+        <MappingFragment StoreEntitySet="EE_ORDENES_PRODUCCION">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="FECHA_REG" ColumnName="FECHA_REG" />
+          <ScalarProperty Name="FECHA_ENTREGA" ColumnName="FECHA_ENTREGA" />
+          <ScalarProperty Name="FECHA_RECEPCION" ColumnName="FECHA_RECEPCION" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+          <ScalarProperty Name="TOTAL_POR_COBRAR" ColumnName="TOTAL_POR_COBRAR" />
+          <ScalarProperty Name="COSTO" ColumnName="COSTO" />
+          <ScalarProperty Name="CANTIDAD_ENTREGADA" ColumnName="CANTIDAD_ENTREGADA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="OBSERVACION" ColumnName="OBSERVACION" />
+          <ScalarProperty Name="RESPONSABLE_RECEPCION" ColumnName="RESPONSABLE_RECEPCION" />
+          <ScalarProperty Name="RESPONSABLE" ColumnName="RESPONSABLE" />
+          <ScalarProperty Name="EMPRESA" ColumnName="EMPRESA" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="TIPO_CLIENTE" ColumnName="TIPO_CLIENTE" />
+          <ScalarProperty Name="NRO_ORDEN" ColumnName="NRO_ORDEN" />
+          <ScalarProperty Name="ID_ORDEN_PRODUCCION" ColumnName="ID_ORDEN_PRODUCCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="P_EE_ALTA_ORDEN_PRODUCCION" FunctionName="Model.Store.P_EE_ALTA_ORDEN_PRODUCCION" />
+  </EntityContainerMapping>
+</Mapping>

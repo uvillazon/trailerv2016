@@ -1,0 +1,5 @@
+C:\Project\Trailer\Trailer.Common.Data\bin\Debug\Trailer.Common.Data.dll
+C:\Project\Trailer\Trailer.Common.Data\bin\Debug\Trailer.Common.Data.pdb
+C:\Project\Trailer\Trailer.Common.Data\obj\Debug\ResolveAssemblyReference.cache
+C:\Project\Trailer\Trailer.Common.Data\obj\Debug\Trailer.Common.Data.dll
+C:\Project\Trailer\Trailer.Common.Data\obj\Debug\Trailer.Common.Data.pdb

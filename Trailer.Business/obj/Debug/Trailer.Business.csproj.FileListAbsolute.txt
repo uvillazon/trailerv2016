@@ -1,0 +1,14 @@
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Business.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Business.pdb
+C:\Project\Trailer\Trailer.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\System.Data.Entity.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Common.Data.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Common.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Model.dll
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Common.Data.pdb
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Common.pdb
+C:\Project\Trailer\Trailer.Business\bin\Debug\Trailer.Model.pdb
+C:\Project\Trailer\Trailer.Business\bin\Debug\Newtonsoft.Json.xml
+C:\Project\Trailer\Trailer.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\Project\Trailer\Trailer.Business\obj\Debug\Trailer.Business.dll
+C:\Project\Trailer\Trailer.Business\obj\Debug\Trailer.Business.pdb

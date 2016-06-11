@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="EE_ARTICULOS" EntityType="Model.Store.EE_ARTICULOS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_BORDADOS" EntityType="Model.Store.EE_BORDADOS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_CLIENTES" EntityType="Model.Store.EE_CLIENTES" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_DETALLES_INGRESO" EntityType="Model.Store.EE_DETALLES_INGRESO" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_EMPLEADOS" EntityType="Model.Store.EE_EMPLEADOS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_EMPRESAS" EntityType="Model.Store.EE_EMPRESAS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_IMAGENES" EntityType="Model.Store.EE_IMAGENES" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_INGRESOS" EntityType="Model.Store.EE_INGRESOS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_LISTAS" EntityType="Model.Store.EE_LISTAS" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_LISTAS_ADM" EntityType="Model.Store.EE_LISTAS_ADM" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_MATERIAS_PRIMA" EntityType="Model.Store.EE_MATERIAS_PRIMA" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_MOLDES" EntityType="Model.Store.EE_MOLDES" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_ORDENES_PRODUCCION" EntityType="Model.Store.EE_ORDENES_PRODUCCION" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_PROVEEDORES" EntityType="Model.Store.EE_PROVEEDORES" store:Type="Tables" Schema="TRAILER1" />
+    <EntitySet Name="EE_RESPONSABLES" EntityType="Model.Store.EE_RESPONSABLES" store:Type="Tables" Schema="TRAILER1" />
+  </EntityContainer>
+  <EntityType Name="EE_ARTICULOS">
+    <Key>
+      <PropertyRef Name="ID_ARTICULO" />
+    </Key>
+    <Property Name="ID_ARTICULO" Type="number" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar2" MaxLength="10" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="250" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="CATEGORIA" Type="varchar2" MaxLength="30" />
+    <Property Name="MEDIDA" Type="varchar2" MaxLength="30" />
+    <Property Name="TELA" Type="varchar2" MaxLength="30" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="EE_BORDADOS">
+    <Key>
+      <PropertyRef Name="ID_BORDADO" />
+    </Key>
+    <Property Name="ID_BORDADO" Type="number" Nullable="false" />
+    <Property Name="ID_IMAGEN" Type="number" />
+    <Property Name="CANAL" Type="varchar2" MaxLength="10" />
+    <Property Name="KARDEX" Type="varchar2" MaxLength="30" />
+    <Property Name="DISENO" Type="varchar2" MaxLength="60" />
+    <Property Name="EMPRESA" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="PUNTADA" Type="varchar2" MaxLength="30" />
+    <Property Name="ANCHO" Type="number" Precision="7" Scale="2" />
+    <Property Name="ALTO" Type="number" Precision="7" Scale="2" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+    <Property Name="ORDEN_PRODUCCION" Type="varchar2" MaxLength="15" />
+    <Property Name="FECHA_REG" Type="date" />
+  </EntityType>
+  <EntityType Name="EE_CLIENTES">
+    <Key>
+      <PropertyRef Name="ID_CLIENTE" />
+    </Key>
+    <Property Name="ID_CLIENTE" Type="number" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="60" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="60" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="30" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="NIT" Type="varchar2" MaxLength="30" />
+    <Property Name="CIUDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="EE_DETALLES_INGRESO">
+    <Key>
+      <PropertyRef Name="ID_DETALLE_INGRESO" />
+    </Key>
+    <Property Name="ID_DETALLE_INGRESO" Type="number" Nullable="false" />
+    <Property Name="ID_INGRESO" Type="number" />
+    <Property Name="ID_MATERIA_PRIMA" Type="number" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="50" />
+    <Property Name="UNIDAD" Type="varchar2" MaxLength="50" />
+    <Property Name="CANTIDAD" Type="number" Precision="10" Scale="2" />
+    <Property Name="COSTO" Type="number" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="number" Precision="10" Scale="2" />
+    <Property Name="FECHA_REG" Type="date" />
+  </EntityType>
+  <EntityType Name="EE_EMPLEADOS">
+    <Key>
+      <PropertyRef Name="ID_EMPLEADO" />
+    </Key>
+    <Property Name="ID_EMPLEADO" Type="number" Nullable="false" />
+    <Property Name="CI" Type="varchar2" MaxLength="30" />
+    <Property Name="CARGO" Type="varchar2" MaxLength="30" />
+    <Property Name="CIUDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="30" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="30" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="60" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="130" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="FECHA_BAJA" Type="date" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="EE_EMPRESAS">
+    <Key>
+      <PropertyRef Name="ID_EMPRESA" />
+    </Key>
+    <Property Name="ID_EMPRESA" Type="number" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar2" MaxLength="30" />
+    <Property Name="CIUDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="60" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="30" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="NIT" Type="varchar2" MaxLength="30" />
+    <Property Name="RESPONSABLE" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="EE_IMAGENES">
+    <Key>
+      <PropertyRef Name="ID_IMAGEN" />
+    </Key>
+    <Property Name="ID_IMAGEN" Type="number" Nullable="false" Precision="10" />
+    <Property Name="TABLA" Type="varchar2" Nullable="false" MaxLength="30" />
+    <Property Name="ID_TABLA" Type="number" Nullable="false" Precision="7" />
+    <Property Name="NOMBRE_IMG" Type="varchar2" MaxLength="50" />
+    <Property Name="EXTENSION" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="TAMANO" Type="number" Precision="7" />
+    <Property Name="IMAGEN_T_REAL" Type="blob" Nullable="false" />
+    <Property Name="FECHA_REG" Type="date" Nullable="false" />
+    <Property Name="ID_USR" Type="number" Nullable="false" Precision="5" />
+  </EntityType>
+  <EntityType Name="EE_INGRESOS">
+    <Key>
+      <PropertyRef Name="ID_INGRESO" />
+    </Key>
+    <Property Name="ID_INGRESO" Type="number" Nullable="false" />
+    <Property Name="NRO_INGRESO" Type="number" />
+    <Property Name="PROVEEDOR" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSABLE" Type="varchar2" MaxLength="50" />
+    <Property Name="DOCUMENTO" Type="varchar2" MaxLength="30" />
+    <Property Name="NRO_DOCUMENTO" Type="varchar2" MaxLength="30" />
+    <Property Name="CARACTERISTICA" Type="varchar2" MaxLength="150" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="20" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="FECHA_INGRESO" Type="date" />
+    <Property Name="TOTAL" Type="number" />
+    <Property Name="TOTAL_CANT" Type="number" />
+  </EntityType>
+  <EntityType Name="EE_LISTAS">
+    <Key>
+      <PropertyRef Name="ID_TABLA" />
+    </Key>
+    <Property Name="ID_TABLA" Type="number" Nullable="false" />
+    <Property Name="TIPO_LISTA" Type="varchar2" MaxLength="50" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="250" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="EE_LISTAS_ADM">
+    <Key>
+      <PropertyRef Name="ID_TABLA" />
+    </Key>
+    <Property Name="ID_TABLA" Type="number" Nullable="false" />
+    <Property Name="LISTA" Type="varchar2" MaxLength="30" />
+    <Property Name="CODIGO" Type="varchar2" MaxLength="10" />
+    <Property Name="VALOR" Type="varchar2" MaxLength="50" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="EE_MATERIAS_PRIMA">
+    <Key>
+      <PropertyRef Name="ID_MATERIA_PRIMA" />
+    </Key>
+    <Property Name="ID_MATERIA_PRIMA" Type="number" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar2" MaxLength="30" />
+    <Property Name="CATEGORIA" Type="varchar2" MaxLength="30" />
+    <Property Name="COLOR" Type="varchar2" MaxLength="30" />
+    <Property Name="UNIDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="100" />
+    <Property Name="CARACTERISTICA" Type="varchar2" MaxLength="150" />
+    <Property Name="STOCK_MINIMO" Type="number" Precision="7" />
+    <Property Name="CALIDAD" Type="varchar2" MaxLength="100" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="CANTIDAD_DISP" Type="number" Precision="12" Scale="2" />
+    <Property Name="COSTO" Type="number" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="EE_MOLDES">
+    <Key>
+      <PropertyRef Name="ID_MOLDE" />
+    </Key>
+    <Property Name="ID_MOLDE" Type="number" Nullable="false" />
+    <Property Name="CODIGO" Type="varchar2" MaxLength="10" />
+    <Property Name="CATEGORIA" Type="varchar2" MaxLength="30" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="60" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="SASTRE" Type="number" Precision="7" Scale="2" />
+    <Property Name="HILO" Type="number" Precision="7" Scale="2" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="EE_ORDENES_PRODUCCION">
+    <Key>
+      <PropertyRef Name="ID_ORDEN_PRODUCCION" />
+    </Key>
+    <Property Name="ID_ORDEN_PRODUCCION" Type="number" Nullable="false" />
+    <Property Name="NRO_ORDEN" Type="number" />
+    <Property Name="TIPO_CLIENTE" Type="varchar2" MaxLength="50" />
+    <Property Name="CLIENTE" Type="varchar2" MaxLength="50" />
+    <Property Name="EMPRESA" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSABLE" Type="varchar2" MaxLength="50" />
+    <Property Name="RESPONSABLE_RECEPCION" Type="varchar2" MaxLength="50" />
+    <Property Name="OBSERVACION" Type="varchar2" MaxLength="150" />
+    <Property Name="CANTIDAD" Type="number" Precision="10" Scale="2" />
+    <Property Name="CANTIDAD_ENTREGADA" Type="number" Precision="10" Scale="2" />
+    <Property Name="COSTO" Type="number" Precision="10" Scale="2" />
+    <Property Name="TOTAL_POR_COBRAR" Type="number" Precision="10" Scale="2" />
+    <Property Name="TOTAL" Type="number" Precision="10" Scale="2" />
+    <Property Name="FECHA_RECEPCION" Type="date" />
+    <Property Name="FECHA_ENTREGA" Type="date" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EE_PROVEEDORES">
+    <Key>
+      <PropertyRef Name="ID_PROVEEDOR" />
+    </Key>
+    <Property Name="ID_PROVEEDOR" Type="number" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="CIUDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="PAIS" Type="varchar2" MaxLength="30" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="60" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="30" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="30" />
+    <Property Name="WEB" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="NIT" Type="varchar2" MaxLength="30" />
+    <Property Name="REPRESENTANTE" Type="varchar2" MaxLength="30" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="EE_RESPONSABLES">
+    <Key>
+      <PropertyRef Name="ID_RESPONSABLE" />
+    </Key>
+    <Property Name="ID_RESPONSABLE" Type="number" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="number" />
+    <Property Name="EMPRESA" Type="varchar2" MaxLength="30" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="30" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="60" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="60" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="30" />
+    <Property Name="FECHA_REG" Type="date" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="30" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="CIUDAD" Type="varchar2" MaxLength="30" />
+    <Property Name="ESTADO" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <Function Name="P_EE_ACTUALIZAR_IMAGEN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_COD_TABLA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ID_TABLA" Type="number" Mode="In" />
+    <Parameter Name="P_ID_IMAGEN" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="number" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_ARTICULO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_ARTICULO" Type="number" Mode="In" />
+    <Parameter Name="P_CODIGO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CATEGORIA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_MEDIDA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ESTADO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_BORDADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_BORDADO" Type="number" Mode="In" />
+    <Parameter Name="P_CANAL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_KARDEX" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DISENO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMPRESA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_PUNTADA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ANCHO" Type="number" Mode="In" />
+    <Parameter Name="P_ALTO" Type="number" Mode="In" />
+    <Parameter Name="P_ORDEN_PRODUCCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_CLIENTE" Type="number" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_APELLIDO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DIRECCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELEFONO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NIT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CIUDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_EMPLEADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_EMPLEADO" Type="number" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_APELLIDO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DIRECCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELEFONO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CI" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CIUDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CARGO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_EMPRESA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_EMPRESA" Type="number" Mode="In" />
+    <Parameter Name="P_CODIGO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DIRECCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELEFONO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NIT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CIUDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSABLE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_INGRESO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_INGRESO" Type="number" Mode="In" />
+    <Parameter Name="P_PROVEEDOR" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSABLE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DOCUMENTO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NRO_DOCUMENTO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CARACTERISTICA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ESTADO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_FECHA_INGRESO" Type="date" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_LISTA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_TABLA" Type="number" Mode="In" />
+    <Parameter Name="P_LISTA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CODIGO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_VALOR" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ESTADO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_MATERIA_PRIMA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_MATERIA_PRIMA" Type="number" Mode="In" />
+    <Parameter Name="P_CODIGO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CATEGORIA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_COLOR" Type="varchar2" Mode="In" />
+    <Parameter Name="P_UNIDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CARACTERISTICA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_STOCK_MINIMO" Type="number" Mode="In" />
+    <Parameter Name="P_CALIDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_ESTADO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_ORDEN_PRODUCCION" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_ORDEN_PRODUCCION" Type="number" Mode="In" />
+    <Parameter Name="P_NRO_ORDEN" Type="number" Mode="In" />
+    <Parameter Name="P_CLIENTE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMPRESA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSABLE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RESPONSABLE_RECEPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CANTIDAD" Type="number" Mode="In" />
+    <Parameter Name="P_COSTO" Type="number" Mode="In" />
+    <Parameter Name="P_TOTAL" Type="number" Mode="In" />
+    <Parameter Name="P_FECHA_RECEPCION" Type="date" Mode="In" />
+    <Parameter Name="P_FECHA_ENTREGA" Type="date" Mode="In" />
+    <Parameter Name="P_OBSERVACION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_PROVEEDOR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_PROVEEDOR" Type="number" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DIRECCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELEFONO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_NIT" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CIUDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_PAIS" Type="varchar2" Mode="In" />
+    <Parameter Name="P_WEB" Type="varchar2" Mode="In" />
+    <Parameter Name="P_REPRESENTANTE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_RESPONSABLE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_RESPONSABLE" Type="number" Mode="In" />
+    <Parameter Name="P_ID_EMPRESA" Type="number" Mode="In" />
+    <Parameter Name="P_NOMBRE" Type="varchar2" Mode="In" />
+    <Parameter Name="P_APELLIDO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DIRECCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_TELEFONO" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_CIUDAD" Type="varchar2" Mode="In" />
+    <Parameter Name="P_EMPRESA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ALTA_TIPO_LISTA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_TIPO_LISTA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_DESCRIPCION" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_BORRAR_IMG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_IMAGEN" Type="number" Mode="In" />
+    <Parameter Name="P_ID_TABLA" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_CONTABILIDAD_INGRESO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_INGRESO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_ARTICULO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_ARTICULO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_BORDADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_BORDADO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_CLIENTE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_CLIENTE" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_DETALLE_INGRESO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_DETALLE_INGRESO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_EMPLEADO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_EMPLEADO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_EMPRESA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_EMPRESA" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_INGRESO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_INGRESO" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_LISTA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_TABLA" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_MATERIA_PRIMA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_MATERIA_PRIMA" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_PROVEEDOR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_PROVEEDOR" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_ELIMINAR_RESPONSABLE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_ID_RESPONSABLE" Type="number" Mode="In" />
+    <Parameter Name="P_RES" Type="varchar2" Mode="Out" />
+  </Function>
+  <Function Name="P_EE_SECUENCIA" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TRAILER1">
+    <Parameter Name="P_COD_TABLA" Type="varchar2" Mode="In" />
+    <Parameter Name="P_RES" Type="number" Mode="Out" />
+  </Function>
+</Schema>

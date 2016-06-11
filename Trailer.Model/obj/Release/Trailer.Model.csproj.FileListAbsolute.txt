@@ -1,0 +1,14 @@
+C:\Project\Trailer\Trailer.Model\bin\Release\Trailer.Model.dll.config
+C:\Project\Trailer\Trailer.Model\bin\Release\Trailer.Model.dll
+C:\Project\Trailer\Trailer.Model\bin\Release\Trailer.Model.pdb
+C:\Project\Trailer\Trailer.Model\bin\Release\System.Data.Entity.dll
+C:\Project\Trailer\Trailer.Model\obj\Release\ResolveAssemblyReference.cache
+C:\Project\Trailer\Trailer.Model\obj\Release\Trailer.Model.dll
+C:\Project\Trailer\Trailer.Model\obj\Release\Trailer.Model.pdb
+E:\Proyecto\Trailer\Trailer.Model\bin\Release\Trailer.Model.dll.config
+E:\Proyecto\Trailer\Trailer.Model\bin\Release\Trailer.Model.dll
+E:\Proyecto\Trailer\Trailer.Model\bin\Release\Trailer.Model.pdb
+E:\Proyecto\Trailer\Trailer.Model\bin\Release\System.Data.Entity.dll
+E:\Proyecto\Trailer\Trailer.Model\obj\Release\Trailer.Model.dll
+E:\Proyecto\Trailer\Trailer.Model\obj\Release\Trailer.Model.pdb
+E:\Proyecto\Trailer\Trailer.Model\obj\Release\Trailer.Model.csprojResolveAssemblyReference.cache
